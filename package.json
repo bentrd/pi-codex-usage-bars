@@ -1,0 +1,44 @@
+{
+  "name": "pi-codex-usage-bars",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Colorful right-aligned Codex usage bars for the Pi coding agent footer.",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "pi",
+    "codex",
+    "usage",
+    "statusline"
+  ],
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bentrd/pi-codex-usage-bars.git"
+  },
+  "homepage": "https://github.com/bentrd/pi-codex-usage-bars#readme",
+  "bugs": {
+    "url": "https://github.com/bentrd/pi-codex-usage-bars/issues"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "check": "node --experimental-strip-types -e \"await import('./index.ts'); console.log('pi-codex-usage-bars: extension import ok')\"",
+    "pack:dry": "npm pack --dry-run"
+  },
+  "files": [
+    "index.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}
